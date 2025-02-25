@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="Imitation Learning, Robot Manipulation, Visuomotor Policy">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RecFlow Policy: Fast and Accurate Visuomotor Policy Learning via Rectified Action Flow</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2J8N1TPPE4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2J8N1TPPE4');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">RecFlow Policy: Fast and Accurate Visuomotor Policy Learning via Rectified Action Flow</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://rongxuezoe.github.io">Rong Xue</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://pointscoder.github.io/">Jiageng Mao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://robo-alex.github.io/">Mingtong Zhang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yuewang.xyz/">Yue Wang</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Southern California,</span>
+            <span class="author-block"><sup>2</sup>Shanghai Jiao Tong University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1aHRAxm16WAsKEIOiSfy66p29jOTf0GQS?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      <h2 class="subtitle has-text-centered">
+        <b>RecFlow Policy</b> is a visual imitation learning algorithm that utilizes 
+        rectified flow with selective refinements, achieving superior effectiveness in 
+        diverse simulation and real-world tasks, with a significant inference 
+        acceleration.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">
+        <b>Real Robot Demonstration</b>
+      </h2>
+    </div>
+    <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-4">
+            <h2 class="subtitle">Champagne Tower</h2>
+            <video poster="" id="tower" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/tower.mp4"
+                  type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-4">
+            <h2 class="subtitle">Floating Object Manipulation</h2>
+            <video poster="" id="floating-duck" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/floating_duck.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-4">
+            <h2 class="subtitle">Putting Apple in the Bowl</h2>
+            <video poster="" id="apple" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/apple.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<br></br>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">
+        <b>Comparison with Baseline</b>
+      </h2>
+    </div>
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-5">
+          <h2 class="subtitle">Flower Arrangement (ours)</h2>
+          <video poster="" id="flower" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/flower.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-5">
+          <h2 class="subtitle">Flower Arrangement (baseline)</h2>
+          <video poster="" id="flower" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dp_x16.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+  </div>
+</div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce RecFlow Policy, a fast, accurate, and scalable policy for robot learning, 
+            bridging the gap between generative modeling techniques and real-world robotic 
+            applications. Diffusion models have seen rapid adoption in robotic imitation learning, 
+            enabling autonomous execution of complex dexterous tasks. However, the dependence of 
+            multi-step iterative denoising makes action synthesis computationally expensive and 
+            slow, limiting their effectiveness in fast-reacting policies.
+            RecFlow Policy replaces the diffusion process with a novel rectified flow 
+            parameterization, significantly enhancing both computational speed and policy accuracy.
+          <!-- </p>
+          <p> -->
+            RecFlow Policy learns a deterministic coupling to achieve rapid policy inference. 
+            This deterministic nature allows for precise visuomotor control with minimal inference 
+            time, making it highly suitable for real-time robotic applications. Unlike conventional 
+            iterative training methods, our approach selectively refines the rectification process 
+            using expert demonstrations to reduce accumulated errors.
+          </p>
+          <p>
+            Leveraging nearly straight flows, RecFlow Policy achieves high accuracy with just a 
+            single denoising step. To evaluate the effectiveness of RecFlow Policy, we conducted 
+            extensive experiments across both simulated and real-world tasks. Results show that 
+            our method matches or surpasses the performance of state-of-the-art diffusion-based 
+            methods while while offering greater simplicity and computational efficiency. 
+            Compared to Diffusion Policy, which involves numerous iterative steps and incurs 
+            significant computational overhead, our approach offers a streamlined and scalable 
+            solution for real-time visuomotor policy learning.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/overview.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      <h2 class="subtitle has-text-centered">
+        We train a visuomotor policy in an iterative manner to transport straight 
+        between noise distribution and target action space, hence enabling lightning 
+        one-step sampling during inference. The rectified action flow is selectively 
+        <i>refine</i>d, lowering the potential accumulated error brought by multiple 
+        <i>reflow</i>s.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/???.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/rongxuezoe class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Template was borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
