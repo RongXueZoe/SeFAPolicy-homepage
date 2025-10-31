@@ -39,6 +39,45 @@
 <body>
 
 
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title></title>
+      <style>
+      body{background-color: #FFFFFF;}
+      .typer{
+        --background:linear-gradient(to right,#000,#03FFF0 70%,green);
+        --font-color:linear-gradient(to right,#F00,#FF0,#000);
+        --font-size:2em;
+        display: inline-block;
+        /* position: relative; */
+        font-size:var(--font-size);
+        font-weight: bold;
+        padding: calc(var(--font-size) * 0.25);
+        background:var(--font-color),var(--background);
+        -webkit-background-clip: text,border-box;
+        -webkit-text-fill-color: transparent;
+        background-clip: text,border-box;
+        color: transparent;
+      }
+      .transparent{
+        --background:transparent!important;
+      }
+      /*  .typer::after{
+        content: "";
+        position: absolute;z-index: -1;left:0;top:0;width: 100%;height: 100%;
+        background-image: linear-gradient(to right,#000,gray);			
+      } */
+      </style>
+    </head>
+    <body>
+      <div>这是透明背景彩虹字</div>
+      <div class="typer transparent">我</div><br>
+      <div>这是自定义背景彩虹字</div>
+      <div class="typer">我</div>
+    </body>
+  </html>
+
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
