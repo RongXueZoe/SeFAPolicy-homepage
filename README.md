@@ -2,7 +2,7 @@
 
 This is the repository that contains source code for the [SeFA Policy website](https://rongxuezoe.github.io/SeFAPolicy-homepage/).
 
-If you find SeFA Policy useful for your work please cite:
+If you find SeFA Policy useful for your work please consider citing it:
 ```
 ```
 
