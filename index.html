@@ -35,52 +35,46 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+  body{background-color: #FFFFFF;}
+  .typer{
+    --background:linear-gradient(to right,#000,#03FFF0 70%,green);
+    --font-color:linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    --font-size:2em;
+    display: inline-block;
+    /* position: relative; */
+    font-size:var(--font-size);
+    font-weight: bold;
+    padding: calc(var(--font-size) * 0.25);
+    background:var(--font-color),var(--background);
+    -webkit-background-clip: text,border-box;
+    -webkit-text-fill-color: transparent;
+    background-clip: text,border-box;
+    color: transparent;
+  }
+  .transparent{
+    --background:transparent!important;
+  }
+  /*  .typer::after{
+    content: "";
+    position: absolute;z-index: -1;left:0;top:0;width: 100%;height: 100%;
+    background-image: linear-gradient(to right,#000,gray);			
+  } */
+  </style>
 </head>
+
 <body>
-
-
-  <html>
-    <head>
-      <meta charset="utf-8">
-      <title></title>
-      <style>
-      body{background-color: #FFFFFF;}
-      .typer{
-        --background:linear-gradient(to right,#000,#03FFF0 70%,green);
-        --font-color:linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-        --font-size:2em;
-        display: inline-block;
-        /* position: relative; */
-        font-size:var(--font-size);
-        font-weight: bold;
-        padding: calc(var(--font-size) * 0.25);
-        background:var(--font-color),var(--background);
-        -webkit-background-clip: text,border-box;
-        -webkit-text-fill-color: transparent;
-        background-clip: text,border-box;
-        color: transparent;
-      }
-      .transparent{
-        --background:transparent!important;
-      }
-      /*  .typer::after{
-        content: "";
-        position: absolute;z-index: -1;left:0;top:0;width: 100%;height: 100%;
-        background-image: linear-gradient(to right,#000,gray);			
-      } */
-      </style>
-    </head>
-    <body>
-      <div class="typer transparent">SeFA Policy</div><br>
-    </body>
-  </html>
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">SeFA-Policy: Fast and Accurate Visuomotor Policy Learning with Selective Flow Alignment</h1>
+          <h1 class="title is-1 publication-title">
+            <div class="typer transparent">SeFA Policy</div>: Fast and Accurate Visuomotor Policy Learning with Selective Flow Alignment</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://rongxuezoe.github.io">Rong Xue</a><sup>1*</sup>,
@@ -223,7 +217,7 @@
 </div>
 </section>
 
-<br></br>
+</br>
 
 <section class="hero is-light is-small">
   <div class="hero-body">
