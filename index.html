@@ -209,7 +209,7 @@
             have recently achieved strong performance in complex manipulation tasks, but their 
             reliance on multi-step iterative denoising makes them computationally expensive 
             and unsuitable for real-time control. Flow-based models have emerged as a promising 
-            alternative, enabling fewer-step action generation~\cite{hu2024adaflow} and 
+            alternative, enabling fewer-step action generation and 
             rectification~\cite{liu2023flow} by transporting nearly straight from noise to 
             action space, thus significantly reducing inference latency.
           <!-- </p>
@@ -268,11 +268,10 @@
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
       <h2 class="subtitle has-text-centered">
-        We train a visuomotor policy in an iterative manner to transport straight 
-        between noise distribution and target action space, hence enabling lightning 
-        one-step sampling during inference. The rectified action flow is selectively 
-        <i>refine</i>d, lowering the potential accumulated error brought by multiple 
-        <i>reflow</i>s.
+        We train a visuomotor policy in an iterative manner to transport straight between 
+        noise distribution and target action space, hence enabling lightning one-step 
+        sampling during inference. The action flow is selectively \textit{aligned} with 
+        observations, lowering the potential accumulated error brought by multiple reflows.
       </h2>
     </div>
   </div>
@@ -282,7 +281,18 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-      
+      @article{chi2023diffusion,
+        title={Diffusion policy: Visuomotor policy learning via action diffusion},
+        author={Chi, Cheng and Feng, Siyuan and Du, Yilun and Xu, Zhenjia and Cousineau, Eric and Burchfiel, Benjamin and Song, Shuran},
+        journal={arXiv preprint arXiv:2303.04137},
+        year={2023}
+      }
+      @inproceedings{liu2022flow,
+        title={Flow straight and fast: Learning to generate and transfer data with rectified flow},
+        author={Liu, Xingchao and Gong, Chengyue and Liu, Qiang},
+      booktitle={The Eleventh International Conference on Learning Representations },
+      year={2023},
+      }
     </code></pre>
   </div>
 </section>
