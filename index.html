@@ -120,10 +120,9 @@
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
       <h2 class="subtitle has-text-centered">
-        <b>RecFlow Policy</b> is a visual imitation learning algorithm that utilizes 
-        rectified flow with selective refinements, achieving superior effectiveness in 
-        diverse simulation and real-world tasks, with a significant inference 
-        acceleration.
+        <b>SeFA Policy</b> is a visual imitation learning algorithm that utilizes rectified 
+        flow with selective alignment, achieving superior effectiveness in diverse simulation 
+        and real-world tasks, with a significant inference acceleration.
       </h2>
     </div>
   </div>
@@ -232,9 +231,18 @@
             
           <!-- </p>
           <p> -->
-            To overcome this limitation, we propose \textbf{\oursfull} (\textbf{\ours}), a flow-based visuomotor policy with a selective alignment strategy. The straight paths in flow-based models are computationally efficient because they can be sampled in a few or even one step. However, the straightening process~\cite{liu2023flow} often accumulates errors from the base model, which leads to the observation–action inconsistency. \ours leverages expert demonstrations to align the sampling paths with observations while maintaining the straightness of the paths.
-            Crucially, this alignment is applied in a selective manner, preserving action diversity and multimodality while eliminating harmful mismatches. 
-            By combining efficiency in straight sampling paths with observation-consistent alignment, \ours enables one-step action synthesis that is both fast and reliable for real-time visuomotor control.
+            To overcome this limitation, we propose Selective Flow Alignment (SeFA), a 
+            flow-based visuomotor policy with a selective alignment strategy. The straight 
+            paths in flow-based models are computationally efficient because they can be sampled 
+            in a few or even one step. However, the straightening process~\cite{liu2023flow} 
+            often accumulates errors from the base model, which leads to the observation–action 
+            inconsistency. SeFA leverages expert demonstrations to align the sampling paths with 
+            observations while maintaining the straightness of the paths.
+            Crucially, this alignment is applied in a selective manner, preserving action 
+            diversity and multimodality while eliminating harmful mismatches. 
+            By combining efficiency in straight sampling paths with observation-consistent 
+            alignment, SeFA Policy enables one-step action synthesis that is both fast and reliable for 
+            real-time visuomotor control.
           </p>
           <p>
             Leveraging nearly straight flows, SeFA Policy achieves high accuracy with just a 
