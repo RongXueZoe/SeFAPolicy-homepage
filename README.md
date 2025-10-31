@@ -1,8 +1,8 @@
-# RecFlow Policy
+# SeFA Policy
 
-This is the repository that contains source code for the [RecFlow Policy website](https://rongxuezoe.github.io/RecFlowPolicy-homepage/).
+This is the repository that contains source code for the [SeFA Policy website](https://rongxuezoe.github.io/SeFAPolicy-homepage/).
 
-If you find RecFlow Policy useful for your work please cite:
+If you find SeFA Policy useful for your work please cite:
 ```
 ```
 
