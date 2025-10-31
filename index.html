@@ -148,7 +148,7 @@
           <div class="column is-3">
             <h2 class="subtitle">Knob Pull</h2>
             <video poster="" id="pull" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/pull.mov"
+              <source src="./static/videos/pull.MOV"
                       type="video/mp4">
             </video>
           </div>
@@ -290,22 +290,22 @@
             
           </p>
           <p>
-            To overcome this limitation, we propose Selective Flow Alignment (SeFA), a 
-            flow-based visuomotor policy with a selective alignment strategy. The straight 
+            To overcome this limitation, we propose <b>Selective Flow Alignment (SeFA)</b>, <b>a 
+            flow-based visuomotor policy with a selective alignment strategy</b>. The straight 
             paths in flow-based models are computationally efficient because they can be sampled 
             in a few or even one step. However, the straightening process[2] 
             often accumulates errors from the base model, which leads to the observation–action 
-            inconsistency. SeFA leverages expert demonstrations to align the sampling paths with 
-            observations while maintaining the straightness of the paths.
+            inconsistency. <b>SeFA</b> leverages expert demonstrations to <b>align the sampling paths with 
+            observations while maintaining the straightness of the paths</b>.
             Crucially, this alignment is applied in a selective manner, preserving action 
             diversity and multimodality while eliminating harmful mismatches. 
             By combining efficiency in straight sampling paths with observation-consistent 
-            alignment, SeFA Policy enables one-step action synthesis that is both fast and reliable for 
+            alignment, <b>SeFA Policy</b> enables one-step action synthesis that is both fast and reliable for 
             real-time visuomotor control.
           </p>
           <p>
-            Leveraging nearly straight flows, SeFA Policy achieves high accuracy with just a 
-            single denoising step. To evaluate the effectiveness of SeFA Policy, we conducted 
+            Leveraging nearly straight flows, <b>SeFA Policy</b> achieves high accuracy with just a 
+            single denoising step. To evaluate the effectiveness of <b>SeFA Policy</b>, we conducted 
             extensive experiments across both simulated and real-world tasks. Results show that 
             our method matches or surpasses the performance of state-of-the-art diffusion-based 
             methods while while offering greater simplicity and computational efficiency. 
@@ -329,10 +329,19 @@
       <h2 class="subtitle has-text-centered">
         We train a visuomotor policy in an iterative manner to transport straight between 
         noise distribution and target action space, hence enabling lightning one-step 
-        sampling during inference. The action flow is selectively \textit{aligned} with 
+        sampling during inference. The action flow is <b>selectively aligned</b> with 
         observations, lowering the potential accumulated error brought by multiple reflows.
       </h2>
     </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">CIte</h2>
+    If you find <b>SeFA Policy</b> useful for your work please consider citing it:
+    ```
+    ```
   </div>
 </section>
 
