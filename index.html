@@ -139,15 +139,38 @@
     <div class="container">
         <div class="columns is-centered has-text-centered">
           <div class="column is-3">
-            <h2 class="subtitle">Champagne Tower</h2>
-            <video poster="" id="tower" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/tower.mp4"
+            <h2 class="subtitle">Rice Pouring</h2>
+            <video poster="" id="pour" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/pour.MOV"
                   type="video/mp4">
             </video>
           </div>
           <div class="column is-3">
-            <h2 class="subtitle">Floating Object Manipulation</h2>
-            <video poster="" id="floating-duck" autoplay controls muted loop playsinline height="100%">
+            <h2 class="subtitle">Knob Pull</h2>
+            <video poster="" id="pull" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/pull.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-3">
+            <h2 class="subtitle">Coffee Bean Sweeping</h2>
+            <video poster="" id="sweep" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/sweep.MOV"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-3">
+            <h2 class="subtitle">Drawer Close</h2>
+            <video poster="" id="push" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/push.MOV"
+                  type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-3">
+            <h2 class="subtitle">Moving Object Picking</h2>
+            <video poster="" id="moving-duck" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/floating_duck.mp4"
                       type="video/mp4">
             </video>
@@ -159,8 +182,7 @@
                       type="video/mp4">
             </video>
           </div>
-        </div>
-    </div>
+        </div>    </div>
   </div>
 </div>
 </section>
@@ -177,14 +199,14 @@
     <div class="container">
       <div class="columns is-centered has-text-centered">
         <div class="column is-4">
-          <h2 class="subtitle">Flower Arrangement (ours)</h2>
+          <h2 class="subtitle">Flower Insertion (ours)</h2>
           <video poster="" id="flower" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/flower.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="column is-4">
-          <h2 class="subtitle">Flower Arrangement (baseline)</h2>
+          <h2 class="subtitle">Flower Insertion (baseline)</h2>
           <video poster="" id="flower" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/dp_x16.mp4"
             type="video/mp4">
@@ -229,8 +251,8 @@
             distillation-induced inconsistency therefore represents a fundamental barrier to 
             deploying flow-based policies in effective real-time visuomotor control.
             
-          <!-- </p>
-          <p> -->
+          </p>
+          <p>
             To overcome this limitation, we propose Selective Flow Alignment (SeFA), a 
             flow-based visuomotor policy with a selective alignment strategy. The straight 
             paths in flow-based models are computationally efficient because they can be sampled 
